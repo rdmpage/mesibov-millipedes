@@ -1,0 +1,15 @@
+Please cite this data as follows, and pay attention to the rights documented in the rights.txt:
+
+(accessed through GBIF data portal, Field Museum of Natural History (Zoology) Insect, Arachnid and Myriapod Collection, http://data.gbif.org/datasets/resource/14344)
+(accessed through GBIF data portal, SysTax, http://data.gbif.org/datasets/resource/14439)
+(accessed through GBIF data portal, Museum of Comparative Zoology, Harvard University, http://data.gbif.org/datasets/resource/14100)
+(accessed through GBIF data portal, SysTax, http://data.gbif.org/datasets/resource/1875)
+(accessed through GBIF data portal, Australian Museum provider for OZCAM, http://data.gbif.org/datasets/resource/14113)
+(accessed through GBIF data portal, Western Australian Museum provider for OZCAM, http://data.gbif.org/datasets/resource/14123)
+(accessed through GBIF data portal, UMZC Zoological Specimens, http://data.gbif.org/datasets/resource/14193)
+(accessed through GBIF data portal, Zoology (Museum of Evolution - Uppsala), http://data.gbif.org/datasets/resource/1044)
+(accessed through GBIF data portal, Queen Victoria Museum Art Gallery provider for OZCAM, http://data.gbif.org/datasets/resource/14120)
+(accessed through GBIF data portal, Museum Victoria provider for OZCAM, http://data.gbif.org/datasets/resource/14118)
+(accessed through GBIF data portal, Australian National Insect Collection, http://data.gbif.org/datasets/resource/14106)
+(accessed through GBIF data portal, CAS Entomology (ENT), http://data.gbif.org/datasets/resource/14364)
+(accessed through GBIF data portal, Queensland Museum provider for OZCAM, http://data.gbif.org/datasets/resource/14104)

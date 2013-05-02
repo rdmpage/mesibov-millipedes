@@ -1,0 +1,41 @@
+Please respect the rights declared for each dataset in the download:
+
+Dataset: Field Museum of Natural History (Zoology) Insect, Arachnid and Myriapod Collection, http://data.gbif.org/datasets/resource/14344
+Rights as supplied: Copyright © 2012 The Field Museum of Natural History Full details may be found at http://fieldmuseum.org/about/copyright-information
+
+Dataset: SysTax, http://data.gbif.org/datasets/resource/14439
+Rights as supplied: Not supplied
+
+Dataset: Museum of Comparative Zoology, Harvard University, http://data.gbif.org/datasets/resource/14100
+Rights as supplied: Copyright © 2012 The President and Fellows of Harvard College
+
+Dataset: SysTax, http://data.gbif.org/datasets/resource/1875
+Rights as supplied: Not supplied
+
+Dataset: Australian Museum provider for OZCAM, http://data.gbif.org/datasets/resource/14113
+Rights as supplied: Not supplied
+
+Dataset: Western Australian Museum provider for OZCAM, http://data.gbif.org/datasets/resource/14123
+Rights as supplied: Not supplied
+
+Dataset: UMZC Zoological Specimens, http://data.gbif.org/datasets/resource/14193
+Rights as supplied: http://www.zoo.cam.ac.uk/museum/collections.archives/academic.use/
+
+Dataset: Zoology (Museum of Evolution - Uppsala), http://data.gbif.org/datasets/resource/1044
+Rights as supplied: Not supplied
+
+Dataset: Queen Victoria Museum Art Gallery provider for OZCAM, http://data.gbif.org/datasets/resource/14120
+Rights as supplied: Not supplied
+
+Dataset: Museum Victoria provider for OZCAM, http://data.gbif.org/datasets/resource/14118
+Rights as supplied: Not supplied
+
+Dataset: Australian National Insect Collection, http://data.gbif.org/datasets/resource/14106
+Rights as supplied: Source of data should be cited where possible.
+
+Dataset: CAS Entomology (ENT), http://data.gbif.org/datasets/resource/14364
+Rights as supplied: Not supplied
+
+Dataset: Queensland Museum provider for OZCAM, http://data.gbif.org/datasets/resource/14104
+Rights as supplied: Not supplied
+

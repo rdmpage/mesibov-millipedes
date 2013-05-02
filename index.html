@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Mesiobov milliped data compared with GBIF</title>
+	<style type="text/css" title="text/css">
+		@import url("/style.css?20120730");
+	</style>    
+	<style type="text/css">
+		#map{
+			width:100%;
+			height:500px;
+		}
+		#infoBox {
+			width:300px;
+		}		
+	</style>
+	
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="GeoJSON.js"></script>
+	
+	<!-- data -->
+	<script type="text/javascript" src="data.js"></script>
+
+	<script type="text/javascript">
+		var map;
+		currentFeature_or_Features = null;
+		
+		var comparisonStyle = {
+			strokeColor: "blue",
+			strokeWeight: 2,
+			strokeOpacity: 0.75,
+			fillColor: "blue",
+			fillOpacity: 0.25			
+		};
+		
+		var infowindow = new google.maps.InfoWindow();
+		
+		function init(){
+			map = new google.maps.Map(document.getElementById('map'),{
+				zoom: 4,
+				center: new google.maps.LatLng(-28, 135),
+				mapTypeId: google.maps.MapTypeId.TERRAIN
+			});
+			
+			showFeature(geojson, comparisonStyle);
+		}
+		function clearMap(){
+			if (!currentFeature_or_Features)
+				return;
+			if (currentFeature_or_Features.length){
+				for (var i = 0; i < currentFeature_or_Features.length; i++){
+					currentFeature_or_Features[i].setMap(null);
+				}
+			}else{
+				currentFeature_or_Features.setMap(null);
+			}
+			if (infowindow.getMap()){
+				infowindow.close();
+			}
+		}
+		function showFeature(geojson, style){
+			clearMap();
+			currentFeature_or_Features = new GeoJSON(geojson, style || null);
+			if (currentFeature_or_Features.type && currentFeature_or_Features.type == "Error"){
+				document.getElementById("put_geojson_string_here").value = currentFeature_or_Features.message;
+				return;
+			}
+			if (currentFeature_or_Features.length){
+				for (var i = 0; i < currentFeature_or_Features.length; i++){
+					currentFeature_or_Features[i].setMap(map);
+					if (currentFeature_or_Features[i].geojsonProperties) {
+						setInfoWindow(currentFeature_or_Features[i]);
+					}
+				}
+			}else{
+				currentFeature_or_Features.setMap(map)
+				if (currentFeature_or_Features.geojsonProperties) {
+					setInfoWindow(currentFeature_or_Features);
+				}
+			}
+			
+			//document.getElementById("put_geojson_string_here").value = JSON.stringify(geojson);
+		}
+		function rawGeoJSON(){
+			clearMap();
+			currentFeature_or_Features = new GeoJSON(JSON.parse(document.getElementById("put_geojson_string_here").value));
+			if (currentFeature_or_Features.length){
+				for (var i = 0; i < currentFeature_or_Features.length; i++){
+					currentFeature_or_Features[i].setMap(map);
+				}
+			}else{
+				currentFeature_or_Features.setMap(map);
+			}
+		}
+		function setInfoWindow (feature) {
+			google.maps.event.addListener(feature, "click", function(event) {
+				var content = "<div id='infoBox'><strong>GeoJSON Feature Properties</strong><br />";
+				for (var j in this.geojsonProperties) {
+					content += j + ": " + this.geojsonProperties[j] + "<br />";
+				}
+				content += "</div>";
+				infowindow.setContent(content);
+				infowindow.position = event.latLng;
+				infowindow.open(map);
+			});
+		}
+	</script>
+</head>
+<body onload="init();">
+<div id="map"></div>
+<p>Comparison of occurrence records for native Australian millipedes from the <a href="http://data.gbif.org">Global Biodiversity Information Facility (GBIF)</a> and the <a href="http://www.polydesmida.info/millipedesofaustralia/">Millipedes of Australia (MoA)</a>. Data from "A specialist's audit of aggregated occurrence records" by Robert Mesibov (<a href="http://dx.doi.org/10.3897/zookeys.293.5111">http://dx.doi.org/10.3897/zookeys.293.5111</a>). Lines connect GBIF and MoA localities for same record, MoA uncertainty indicated by circles.</p>
+</body>
+</html>
